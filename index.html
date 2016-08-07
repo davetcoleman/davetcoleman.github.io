@@ -8,7 +8,13 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Davetcoleman.github.io</title>
+    <title>
+      {% if page.title != "index" %}
+        {{ site.title }}|{{ page.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
   </head>
 
   <body>
@@ -68,7 +74,7 @@ $ git checkout gh-pages
       </footer>
     </div>
 
-    
+
 
   </body>
 </html>
